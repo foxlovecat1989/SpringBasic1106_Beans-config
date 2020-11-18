@@ -6,7 +6,7 @@ import org.junit.Test;
 public class Test_Student {
    @Test
     public void t1(){
-        Student s = new Student("Sam", 21);
+        Student s = new Student(21, "Sam");
         System.out.println(s);
    } 
 }
