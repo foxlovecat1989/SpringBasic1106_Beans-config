@@ -50,6 +50,14 @@
           destroy-method="end"
           c:name="Tom"
           c:age="65" 
-    />        
+    />     
+    
+    <!-- ref 參考注入 1 -->
+    <bean id="t1" class="com.mycompany.springbasic1106.di.Teacher" c:name="Hellen"/>
+    <bean id="s7" class="com.mycompany.springbasic1106.di.Student">
+        <property name="name" value="Alisa"/>
+        <property name="age" value="28"/>
+        <property name="teacher" ref="t1"/>
+    </bean>
     
 </beans>

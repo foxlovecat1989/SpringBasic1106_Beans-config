@@ -4,6 +4,7 @@ public class Student {
     
     private String name;
     private Integer age;
+    private Teacher teacher;
 
     public Student() {
     }
@@ -12,7 +13,21 @@ public class Student {
         this.name = name;
         this.age = age;
     }
+    
+    public Student(String name, Integer age, Teacher teacher) {
+        this.name = name;
+        this.age = age;
+        this.teacher = teacher;
+    }
 
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        this.teacher = teacher;
+    }
+    
     public String getName() {
         return name;
     }
@@ -31,7 +46,8 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" + "name=" + name + ", age=" + age + '}';
+        return "Student{" + "name=" + name + ", age=" + age + ", teacher=" 
+                + ((teacher == null) ? " ":teacher.getName()) + '}';
     }
     
      public void start() {
