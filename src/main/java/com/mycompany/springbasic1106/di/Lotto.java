@@ -1,5 +1,6 @@
 package com.mycompany.springbasic1106.di;
 
+import java.util.LinkedHashSet;
 import java.util.Random;
 import java.util.Set;
 
@@ -16,6 +17,7 @@ public class Lotto {
         this.amount = amount;
         this.begin = begin;
         this.end = end;
+        this.nums = new LinkedHashSet<>();
         Random random  = new Random();
         while(this.nums.size() < amount){
             int num = random.nextInt(end - begin + 1) + begin;

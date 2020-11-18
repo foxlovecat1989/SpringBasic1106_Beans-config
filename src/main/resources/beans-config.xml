@@ -133,5 +133,5 @@
     <bean id="t4" class="com.mycompany.springbasic1106.di.Teacher" p:name="Mary">
         <property name="students" ref="studentsList1" />
     </bean>
-     
+   
 </beans>

@@ -1,5 +1,6 @@
 package di;
 
+import com.mycompany.springbasic1106.di.Lotto;
 import com.mycompany.springbasic1106.di.Student;
 import com.mycompany.springbasic1106.di.Teacher;
 import org.junit.Test;
