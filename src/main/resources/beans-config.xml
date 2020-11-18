@@ -43,5 +43,13 @@
           c:age="19"
     />
     
+    <!-- 使用 xxx-method 配置 -->
+    <bean id="s6"
+          class="com.mycompany.springbasic1106.di.Student"        
+          init-method="start"
+          destroy-method="end"
+          c:name="Tom"
+          c:age="65" 
+    />        
     
 </beans>

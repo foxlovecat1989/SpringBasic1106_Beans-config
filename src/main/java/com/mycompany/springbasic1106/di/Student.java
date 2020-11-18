@@ -33,4 +33,12 @@ public class Student {
     public String toString() {
         return "Student{" + "name=" + name + ", age=" + age + '}';
     }
+    
+     public void start() {
+        System.out.println("START...");
+    }
+    
+    public void end() {
+        System.out.println("END...");
+    }
 }
