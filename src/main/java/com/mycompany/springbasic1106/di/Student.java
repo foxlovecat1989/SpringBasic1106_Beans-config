@@ -9,6 +9,11 @@ public class Student {
     public Student() {
     }
 
+    public Student(Integer age) {
+        this.age = age;
+    }
+    
+
     public Student(Integer age, String name) {
         this.name = name;
         this.age = age;
@@ -47,7 +52,7 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" + "name=" + name + ", age=" + age + ", teacher=" 
-                + ((teacher == null) ? " ":teacher.getName()) + '}';
+                + ((teacher == null) ? "Null":teacher.getName()) + '}';
     }
     
      public void start() {

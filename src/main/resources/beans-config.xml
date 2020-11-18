@@ -60,4 +60,24 @@
         <property name="teacher" ref="t1"/>
     </bean>
     
+     <!-- ref 參考注入 2 --><!-- 注入參考資料 -->
+     <bean id="t2" class="com.mycompany.springbasic1106.di.Teacher"/>
+     <bean id="s8" class="com.mycompany.springbasic1106.di.Student">
+         <property name="name" value="Amber"/>
+         <property name="age" value="21"/>
+         <property name="teacher" ref="t2" />
+         <!-- 注入參考資料 -->
+         <property name="teacher.name" value="Amber's Teacher" />
+     </bean>
+     
+     <!-- ref 參考注入 3 -->
+     <bean id="s9" class="com.mycompany.springbasic1106.di.Student" p:name="Alice" c:age="23">
+        <property name="teacher">
+            <!-- ref 參考注入內部類別 -->
+            <bean class="com.mycompany.springbasic1106.di.Teacher" c:name="Alice'Teacher"/>
+            <!--
+            <bean class="com.mycompany.springbasic1106.di.Teacher" p:name="Alice'Teacher"/>
+            -->
+        </property>
+     </bean>
 </beans>
