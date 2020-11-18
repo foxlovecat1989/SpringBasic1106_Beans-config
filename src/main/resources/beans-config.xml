@@ -22,5 +22,12 @@
             <value>21</value>
         </property>
     </bean>
-
+    
+    <!-- 建構子注入 -->
+    <bean id="s3" class="com.mycompany.springbasic1106.di.Student">
+        <constructor-arg index="0" value="12" type="java.lang.Integer"/>
+        <constructor-arg index="1" value="Hary" type="java.lang.String"/>
+    </bean>
+    
+    
 </beans>
