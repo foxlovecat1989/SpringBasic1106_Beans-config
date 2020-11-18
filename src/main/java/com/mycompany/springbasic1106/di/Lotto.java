@@ -12,15 +12,15 @@ public class Lotto {
 
     public Lotto() {
     }
-    
+
     public Lotto(Integer amount, Integer begin, Integer end) {
         this.amount = amount;
         this.begin = begin;
         this.end = end;
         this.nums = new LinkedHashSet<>();
-        Random random  = new Random();
-        while(this.nums.size() < amount){
-            int num = random.nextInt(end - begin + 1) + begin;
+        Random r = new Random();
+        while (this.nums.size() < amount) {            
+            int num = r.nextInt(end-begin+1) + begin;
             this.nums.add(num);
         }
     }
@@ -56,7 +56,7 @@ public class Lotto {
     public void setNums(Set<Integer> nums) {
         this.nums = nums;
     }
-
+    
     @Override
     public String toString() {
         return "Lotto{" + "amount=" + amount + ", begin=" + begin + ", end=" + end + ", nums=" + nums + '}';

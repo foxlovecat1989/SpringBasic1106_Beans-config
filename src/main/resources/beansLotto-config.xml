@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       
+       xsi:schemaLocation= 
+            "http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+            http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd
 ">
     <!-- 工廠模式 FactoryBean -->
     <bean id="lotto" class="com.mycompany.springbasic1106.di.LottoFactory" />
+
+    <!-- Bean 的作用域scope : prototype, singleton, request, session -->
+    <bean id="lottoA" 
+          class="com.mycompany.springbasic1106.di.Lotto"
+          scope="prototype"
+          c:amount="5"
+          c:begin="1"
+          c:end="39"
+    />
+    <bean id="lottoB" 
+          class="com.mycompany.springbasic1106.di.Lotto"
+          scope="prototype"
+          c:amount="5"
+          c:begin="1"
+          c:end="39"
+    />
 </beans>
