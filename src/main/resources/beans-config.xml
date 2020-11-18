@@ -81,8 +81,10 @@
         </property>
      </bean>
      
-     <!-- 集合注入 List -->
+     <!-- 集合注入 List/Set/Map -->
      <bean id="t3" class="com.mycompany.springbasic1106.di.Teacher" c:name="Lucy">
+         
+         <!-- 班級 -->
          <property name="cls">
              <list> <!-- 可替換 <array> -->
                  <value>A</value>
@@ -90,5 +92,34 @@
                  <value>C</value>
              </list>
          </property>
+         
+         <!-- 學生 -->
+         <property name="students">
+             <set>
+                 <ref bean="s1"/>
+                 <ref bean="s4"/>
+                 <ref bean="s7"/>
+                 <ref bean="s8"/>
+             </set>
+         </property>
+         
+         <!-- 科目 -->
+         <property name="subjects">
+             <map>
+                 <entry>
+                     <key><value>English</value></key>
+                     <value>1</value>
+                 </entry>
+                 <entry>
+                     <key><value>Math</value></key>
+                     <value>2</value>
+                 </entry>
+                 <entry>
+                     <key><value>History</value></key>
+                     <value>3</value>
+                 </entry>
+             </map>
+         </property>
+         
      </bean>
 </beans>
