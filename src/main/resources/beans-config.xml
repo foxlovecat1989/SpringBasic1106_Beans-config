@@ -80,4 +80,15 @@
             -->
         </property>
      </bean>
+     
+     <!-- 集合注入 List -->
+     <bean id="t3" class="com.mycompany.springbasic1106.di.Teacher" c:name="Lucy">
+         <property name="cls">
+             <list> <!-- 可替換 <array> -->
+                 <value>A</value>
+                 <value>B</value>
+                 <value>C</value>
+             </list>
+         </property>
+     </bean>
 </beans>
