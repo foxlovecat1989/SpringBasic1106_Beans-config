@@ -29,5 +29,19 @@
         <constructor-arg index="1" value="Hary" type="java.lang.String"/>
     </bean>
     
+     <!-- 使用 p 命名空間方法注入 -->
+    <bean id="s4" 
+          class="com.mycompany.springbasic1106.di.Student"
+          p:name="Lisa"
+          p:age="32"
+    />
+    
+    <!-- 使用 c 命名空間建構子注入 -->
+    <bean id="s5" 
+          class="com.mycompany.springbasic1106.di.Student"
+          c:name="Allen"
+          c:age="19"
+    />
+    
     
 </beans>
